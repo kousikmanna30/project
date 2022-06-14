@@ -1,0 +1,38 @@
+<div id="layoutSidenav">
+    {{>admin/sidebar}}
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h2 class="mt-4" style="padding-left: 500px;!important">All Users list</h2>
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <table class="application-table">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Action</th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each data}}
+                                <tr>
+                                    <td>{{inc @index}}</td>
+                                    <td>{{name}} </td>
+                                    <td>{{email}}</td>
+                                    <td width="20%" style="text-align: center;!important">
+                                        <a class="btn btn-primary" href="/admin/selected-user?id={{id}}">View Details</a>
+                                        <a class="btn btn-info" href="/admin/selected-user-posted-work">Posted Work</a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

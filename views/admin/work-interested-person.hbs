@@ -1,0 +1,36 @@
+<div id="layoutSidenav">
+    {{>admin/sidebar}}
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h2 class="mt-4">Interested Person List</h2>
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <table class="application-table">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>Worker Name</th>
+                                    <th>Date of Interest</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each data}}
+                                <tr>
+                                    <td>{{inc @index}}</td>
+                                    <td>{{name}}</td>
+                                    <td>{{date}}</td>
+                                    <td>
+                                        <a class="btn btn-success" href="/admin/selected-worker?id={{id}}">Contact</a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>

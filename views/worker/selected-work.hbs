@@ -1,0 +1,86 @@
+            <main style="margin-left: 250px;!important">
+                <div class="container-fluid px-4">
+                    <h2 class="mt-4"> Users Specific Posted Work</h2>
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <table class="application-table">
+                                <tbody>
+                                    {{#each data}}
+                                    <tr>
+                                        <td><b>Client Id:-</b></td>
+                                        <td>{{id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Client Name:-</b></td>
+                                        <td>{{name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Client Email:-</b></td>
+                                        <td>{{email}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Name</b></td>
+                                        <td>{{work_name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Type</b></td>
+                                        <td>{{work_type}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Description</b></td>
+                                        <td>{{work_description}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Location</b></td>
+                                        <td>{{work_location}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Amount</b></td>
+                                        <td>{{work_amount}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Post Date</b></td>
+                                        <td>{{work_post_date}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Have To Compleate On</b></td>
+                                        <td>{{work_completed_date}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>User Id</b></td>
+                                        <td>{{users_id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Status</b></td>
+                                        <td>{{status}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Status</b></td>
+                                        <td>{{work_status}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Worker Id</b></td>
+                                        <td>{{worker_id}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Start Date</b></td>
+                                        <td>{{work_start_date}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Work Finish Date</b></td>
+                                        <td>{{work_finish_date}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Interested Person Click Hear</b></td>
+                                        <td  style="padding-left: 130px;!important"><a class="btn btn-success" href="#">Show Interest</a></td> 
+                                    </tr>
+                                    
+                                    
+                                    {{/each}}
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>

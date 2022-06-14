@@ -1,0 +1,83 @@
+<main>
+    <div class="container-fluid px-4" id="sss">
+        <h2 class="mt-4">Specific Users Posted Work</h2>
+        <div class="card mb-5">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tbody>
+                        {{#each data}}
+                        <tr>
+                            <td><b>User Name:-</b></td>
+                            <td>{{name}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>User Email:-</b></td>
+                            <td>{{email}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Name</b></td>
+                            <td>{{work_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Type</b></td>
+                            <td>{{work_type}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Description</b></td>
+                            <td>{{work_description}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Location</b></td>
+                            <td>{{work_location}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Amount</b></td>
+                            <td>{{work_amount}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Post Date</b></td>
+                            <td>{{work_post_date}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Have To Compleate On</b></td>
+                            <td>{{work_completed_date}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Status</b></td>
+                            <td>{{work_status}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Worker Name</b></td>
+                            <td>{{worker_name}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Start Date</b></td>
+                            <td>{{work_start_date}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>Work Finish Date</b></td>
+                            <td>{{work_finish_date}}</td>
+                        </tr>
+
+
+
+                        {{/each}}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<style>
+    body {
+        background-color: #00FFFF;
+    }
+
+    #sss {
+        text-align: center;
+        width: 70%;
+    }
+</style>

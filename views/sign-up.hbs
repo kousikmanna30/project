@@ -1,0 +1,51 @@
+
+    <main class="login-body bg-info">
+        <!-- Login Admin -->
+        <form class="form-default" action="register" method="POST">
+
+            <div class="login-form" id="sss">
+                <!-- logo-login -->
+
+                <h2>Registration Here</h2>
+
+                <div class="form-input">
+                    <label for="name">Full name</label>
+                    <input type="text" name="name" placeholder="Full name">
+                </div>
+                <div class="form-input">
+                    <label for="name">Email Address</label>
+                    <input type="email" name="email" placeholder="Email Address">
+                </div>
+                <div class="form-input">
+                    <label for="name">Password</label>
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-input">
+                    <label for="name">Confirm Password</label>
+                    <input type="password" name="confirm-password" placeholder="Confirm Password">
+                </div>
+                <div class="radio-button">
+                    <input type="radio" name="type" value="worker">
+                    <label>As a WORKER</label>
+
+                    <input type="radio" name="type" value="user">
+                    <label>As a USERS</label>
+                </div>
+
+
+                <div class="form-input pt-30">
+                    <input type="submit" name="submit" value="Registration">
+                </div>
+                <!-- Forget Password -->
+                <a href="/users" class="registration">User login</a>
+                <a href="/worker" class="registration">Worker login</a>
+            </div>
+        </form>
+        <!-- /end login form -->
+    </main>
+<style>
+    #sss{
+        margin-top: 80px !important;
+    }
+    
+</style>

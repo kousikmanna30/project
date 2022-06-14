@@ -1,0 +1,79 @@
+        <main id="work-list" class="login-body bg-info">
+            <div class="container-fluid px-4">
+                <h2 class="mt-4" style="padding-left: 700px;!important ">Work List</h2>
+                <div class="search">
+
+                    {{!-- <lable style="color: teal;font-size: 25px"> Search hear :- </lable>
+                    <input type="text" name="" id="myInput" placeholder="search hear..." onkeyup="searchFun()"> --}}
+
+                </div>
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <table id="myTable" class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sl No</th>
+                                    <th>User Name</th>
+                                    <th>User Email</th>
+                                    <th>Work Name</th>
+                                    <th>Work Type</th>
+                                    <th>Work Location</th>
+                                    <th>Alloted Amount</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each data}}
+                                <tr>
+                                    <td  width="1%">{{inc @index}}</td>
+                                    <td>{{name}} </td>
+                                    <td>{{email}}</td>
+                                    <td>{{work_name}}</td>
+                                    <td>{{work_type}} </td>
+                                    <td width="10%">{{work_location}}</td>
+                                    <td width="3%">{{work_amount}}</td>
+                                    <td width="2%">
+                                        <a class="btn btn-success"  href="/details-postwork?id={{postId}}">View</a>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+<style>
+    #work-list{
+        padding-top: 100px;in !important
+    }
+</style>
+
+
+
+<script>
+
+    const searchFun = () => {
+        let filter = document.getElementById('myInput').value.toUpperCase();
+
+        let myTable = document.getElementById('myTable');
+
+        let tr = myTable.getElementsByTagName('tr');
+
+        for (var i = 0; i < tr.length; i++) {
+            let td = tr[i].getElementsByTagName('td')[1];
+
+            if (td) {
+                let textvalue = td.textContent || td.innerHTML;
+
+                if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+</script>

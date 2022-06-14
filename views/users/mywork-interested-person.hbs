@@ -1,0 +1,53 @@
+<main>
+    <div class="container-fluid px-4" id="sss">
+        <h2 class="mt-4">Interested Person List</h2>
+        <div class="card mb-5">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sl No</th>
+                            <td>Worker Name</td>
+                            <th>Date of Interest</th>
+                            <th>Interest Status</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each data}}
+                        <tr>
+                            <td>{{inc @index}}</td>
+                            <td>{{name}}</td>
+                            <td>{{date}}</td>
+                            <td>{{mStatus int_status}}</td>
+                            <td id="ssss">
+                                {{#if (if_eq int_status 'P')}}
+                                <a class="btn btn-success"
+                                    href="/users/update-interested-work?type=A&id={{id}}&work_id={{work_id}}">Accept</a>
+                                <a class="btn btn-danger"
+                                    href="/users/update-interested-work?type=R&id={{id}}&work_id={{work_id}}">Reject</a>
+                                {{/if}}
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+
+<style>
+    body {
+        background-color: #00FFFF;
+    }
+    #sss{
+        text-align: center;
+        width: 60%;
+    }
+    #ssss{
+        text-align: justify;
+        width: 20%;
+    }
+</style>

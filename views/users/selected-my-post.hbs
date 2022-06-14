@@ -1,0 +1,88 @@
+        <main>
+            <div class="container-fluid px-4" id="sss">
+                <h2 class="mt-4">View Work Details</h2>
+                <div class="card mb-5">
+                    <div class="card-body">
+                        <table class="table table-striped">
+                            <tbody>
+                                {{#each data}}
+
+                                <tr>
+                                    <td><B>DEFINATION TYPE</B></td>
+                                    <td><B>DETAILS</B></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Work Name</td>
+                                    <td>{{work_name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Type</td>
+                                    <td>{{work_type}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Description</td>
+                                    <td>{{work_description}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Location</td>
+                                    <td>{{work_location}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Amount</td>
+                                    <td>{{work_amount}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Post Date</td>
+                                    <td>{{work_post_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Have To Compleate On</td>
+                                    <td>{{work_completed_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Status</td>
+                                    <td>{{status}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Status</td>
+                                    <td>{{work_status}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Worker Id</td>
+                                    <td>{{worker_id}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Start Date</td>
+                                    <td>{{work_start_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Work Finish Date</td>
+                                    <td>{{work_finish_date}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Interested Person Chart</td>
+                                    <td><a class="btn btn-success"
+                                            href="/users/mywork-interested-person?id={{id}}">View Interested Person</a>
+                                    </td>
+                                </tr>
+
+
+                                {{/each}}
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+<style>
+    body {
+        background-color: #00FFFF;
+    }
+    #sss{
+        text-align: center;
+        width: 70%;
+    }
+</style>
